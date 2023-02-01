@@ -84,7 +84,3 @@ $ npm run hmr
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## 🗺 Roadmap
-
-Check [projects](https://github.com/ng-matero/ng-matero/projects) to know the develop plans.
