@@ -1,18 +1,5 @@
-<p align="center">
-  <a href="https://github.com/ng-matero">
-    <img width="150" src="https://avatars1.githubusercontent.com/u/49753463?s=200&v=4">
-  </a>
-</p>
+# Ng-Matero
 
-<h1 align="center">
-NG-MATERO
-</h1>
-
-<div align="center">
-
-Ng-Matero is an Angular admin template made with Material components.
-
-[![CodeFactor](https://www.codefactor.io/repository/github/ng-matero/ng-matero/badge)](https://www.codefactor.io/repository/github/ng-matero/ng-matero)
 [![npm](https://img.shields.io/npm/v/ng-matero.svg)](https://www.npmjs.com/package/ng-matero)
 [![GitHub Release Date](https://img.shields.io/github/release-date/ng-matero/ng-matero)](https://github.com/ng-matero/ng-matero/releases)
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
@@ -22,45 +9,11 @@ Ng-Matero is an Angular admin template made with Material components.
 [![Material Extensions](https://img.shields.io/badge/material-extensions-blue)](https://github.com/ng-matero/extensions#readme)
 [![Financial Contributors on Open Collective](https://opencollective.com/ng-matero/all/badge.svg?label=financial+contributors)](https://opencollective.com/ng-matero)
 
-</div>
+Ng-Matero is an Angular admin templete made with Material components.
 
-## ✨ Features
+## Installation
 
-- Material Extensions
-- Schematics support
-- Modern design style
-- Multiple admin layout
-- Powerful color system
-- Rich CSS helpers
-- Dark mode support
-- RTL support
-- Internationalization
-- Authentication
-- HTTP interceptors
-- Permissions management
-
-## 📖 Documentation
-
-[English](https://nzbin.gitbook.io/ng-matero/v/en-2/) ｜[简体中文](https://nzbin.gitbook.io/ng-matero/)
-
-## 📦 Compatibility
-
-Which version to use?
-
-| Angular | Material | Ng-Matero | Extensions |
-| ------- | -------- | --------- | ---------- |
-| v15     | v15      | 15.x.x    | 15.x.x     |
-| v14     | v14      | 14.3.0    | 14.6.3     |
-| v13     | v13      | 13.1.1    | 13.3.1     |
-| v12     | v12      | 12.8.0    | 12.10.1    |
-| v11     | v11      | 11.3.2    | 11.5.1     |
-| v10     | v10      | 10.4.1    | 10.16.5    |
-| v9      | v9       | 9.7.2     | 9.11.14    |
-| v8      | v8       | 0.16.0    | 0.9.3      |
-
-## 🔧 Installation
-
-The project has support `ng add` yet.
+You can use the Anglar CLI Schematics to install the project.
 
 ```bash
 $ ng new <project-name>
@@ -68,15 +21,7 @@ $ cd <project-name>
 $ ng add ng-matero
 ```
 
-You can also git clone the starter repo to start. But it's not recommended.
-
-```bash
-$ git clone --depth=1 git@github.com:ng-matero/starter.git <project-name>
-$ cd <project-name>
-$ npm install
-```
-
-## ⚙️ Schematics
+## Schematics
 
 You can use the ng-matero schematics to generate a module or a page.
 
@@ -115,22 +60,7 @@ $ ng g ng-matero:page def -m=abc
 
 Take a look at `http://localhost:4200/#/abc/def`, enjoy it!
 
-## 💻 Development
-
-```bash
-$ git clone git@github.com:ng-matero/ng-matero.git
-$ cd ng-matero
-$ npm install
-$ npm run hmr
-```
-
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## 🗺 Roadmap
-
-Check [projects](https://github.com/ng-matero/ng-matero/projects) to know the develop plans.
-
-## 🤝 Contributors
+## Contributors
 
 ### Code Contributors
 
@@ -160,6 +90,6 @@ Support this project with your organization. Your logo will show up here with a 
 <a href="https://opencollective.com/ng-matero/organization/8/website"><img src="https://opencollective.com/ng-matero/organization/8/avatar.svg"></a>
 <a href="https://opencollective.com/ng-matero/organization/9/website"><img src="https://opencollective.com/ng-matero/organization/9/avatar.svg"></a>
 
-## 📃 License
+## License
 
 MIT
