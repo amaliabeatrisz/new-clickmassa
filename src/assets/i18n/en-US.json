@@ -2,6 +2,7 @@
   "menu": {
     "dashboard": "Dashboard",
     "design": "Design",
+    "conexoes": "Dispositivos",
     "design.colors": "Color System",
     "design.icons": "Material Icons",
     "material": "Material",
@@ -90,27 +91,27 @@
     "invalid_email": "Invalid email"
   },
   "user": {
-    "profile": "profile",
-    "settings": "settings",
-    "logout": "logout"
+    "profile": "Perfil",
+    "settings": "Configurações",
+    "logout": "Sair"
   },
   "login": {
-    "title": "Welcome Back",
-    "username": "Username",
-    "password": "Password",
-    "remember_me": "Remember Me",
-    "login": "Login",
-    "have_no_account": "Don't have an account",
-    "create_one": "Click here to create one",
+    "title": "Bem vindo ao ClickMassa",
+    "username": "Email",
+    "password": "Senha",
+    "remember_me": "Lembrar de mim",
+    "login": "ENTRAR",
+    "have_no_account": "Não possui conta",
+    "create_one": "Clique aqui e crie agora",
     "please_enter": "Please enter"
   },
   "register": {
-    "welcome": "Welcome",
-    "title": "It only takes a few seconds to create your account",
-    "confirm_password": "Confirm Password",
-    "agree": "I have read and agree to the terms of service",
-    "have_an_account": "Already have an account",
-    "register": "Create account"
+    "welcome": "Bem vindo",
+    "title": "Leva apenas alguns segundos para criar sua conta",
+    "confirm_password": "Confirmar senha",
+    "agree": "Eu li e concordo com os termos de serviço",
+    "have_an_account": "Já possuo uma conta",
+    "register": "CRIAR CONTA"
   },
   "paginator": {
     "items_per_page_label": "Items per page:",

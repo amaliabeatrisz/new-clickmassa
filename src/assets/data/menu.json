@@ -4,11 +4,13 @@
       "route": "dashboard",
       "name": "dashboard",
       "type": "link",
-      "icon": "dashboard",
-      "badge": {
-        "color": "red-500",
-        "value": "5"
-      }
+      "icon": "dashboard"
+    },
+    {
+      "route": "conexoes",
+      "name": "conexoes",
+      "type": "link",
+      "icon": "smartphone"
     },
     {
       "route": "design",

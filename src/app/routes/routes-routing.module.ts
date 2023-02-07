@@ -1,3 +1,4 @@
+import { ConexoesComponent } from './conexoes/conexoes.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { environment } from '@env/environment';
@@ -21,6 +22,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'conexoes', component: ConexoesComponent},
+      { path: '', redirectTo: 'conexoes', pathMatch: 'full' },
       { path: '403', component: Error403Component },
       { path: '404', component: Error404Component },
       { path: '500', component: Error500Component },

@@ -59,6 +59,7 @@ export class DashboardService {
   stats = [
     {
       title: 'Contatos',
+      icon: 'account_box',
       amount: '2000',
       progress: {
         value: 50,
@@ -67,6 +68,7 @@ export class DashboardService {
     },
     {
       title: 'Mensagens Enviadas',
+      icon: 'done_outline',
       amount: '20.000',
       progress: {
         value: 70,
@@ -75,6 +77,7 @@ export class DashboardService {
     },
     {
       title: 'Mensagens Lidas',
+      icon: 'done_all',
       amount: '10.000',
       progress: {
         value: 5.000,
@@ -83,6 +86,7 @@ export class DashboardService {
     },
     {
       title: 'Mensagens Respondidas',
+      icon: 'reply',
       amount: '5.000',
       progress: {
         value: 5.000,
@@ -106,12 +110,8 @@ export class DashboardService {
       },
       series: [
         {
-          name: 'UV',
+          name: 'Envios',
           data: [31, 40, 28, 51, 42, 109, 100],
-        },
-        {
-          name: 'Download',
-          data: [11, 32, 45, 32, 34, 52, 41],
         },
       ],
       xaxis: {
@@ -134,54 +134,6 @@ export class DashboardService {
       legend: {
         position: 'top',
         horizontalAlign: 'right',
-      },
-    },
-    {
-      chart: {
-        height: 350,
-        type: 'radar',
-      },
-      series: [
-        {
-          name: 'Weekly Revenue',
-          data: [20, 100, 40, 30, 50, 80, 33],
-        },
-      ],
-      labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      plotOptions: {
-        radar: {
-          size: 140,
-          polygons: {
-            strokeColor: '#e9e9e9',
-            fill: {
-              colors: ['#f8f8f8', '#fff'],
-            },
-          },
-        },
-      },
-      colors: ['#FF4560'],
-      markers: {
-        size: 4,
-        colors: ['#fff'],
-        strokeColor: '#FF4560',
-        strokeWidth: 2,
-      },
-      tooltip: {
-        y: {
-          formatter: (val: number) => val,
-        },
-      },
-      yaxis: {
-        tickAmount: 7,
-        labels: {
-          formatter: (val: number, i: number) => {
-            if (i % 2 === 0) {
-              return val;
-            } else {
-              return '';
-            }
-          },
-        },
       },
     },
   ];

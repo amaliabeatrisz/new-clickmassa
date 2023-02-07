@@ -6,7 +6,7 @@ import { SettingsService } from '@core';
   selector: 'app-translate',
   template: `
     <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>translate</mat-icon>
+      <mat-icon>g_translate</mat-icon>
     </button>
 
     <mat-menu #menu="matMenu">
@@ -19,12 +19,10 @@ import { SettingsService } from '@core';
 export class TranslateComponent {
   langs = {
     'en-US': 'English',
-    'zh-CN': '中文简体',
-    'zh-TW': '中文繁体',
   };
 
   constructor(private translate: TranslateService, private settings: SettingsService) {
-    translate.addLangs(['en-US', 'zh-CN', 'zh-TW']);
+    translate.addLangs(['en-US']);
   }
 
   useLanguage(language: string) {

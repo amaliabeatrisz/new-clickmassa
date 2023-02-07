@@ -18,5 +18,5 @@ import { Component } from '@angular/core';
   `,
 })
 export class NotificationComponent {
-  messages = ['Server Error Reports', 'Server Error Reports', 'Server Error Reports'];
+  messages = ['Notificação 1', 'Notificação 2', 'Notificação 3'];
 }

@@ -91,7 +91,7 @@ export class InMemDataService implements InMemoryDbService {
       password: 'ng-matero',
       name: 'Zongbin',
       email: 'nzb329@163.com',
-      avatar: './assets/images/avatar2.jpg',
+      avatar: './assets/images/avatar4.png',
     },
     {
       id: 2,
