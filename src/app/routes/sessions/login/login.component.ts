@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { filter } from 'rxjs/operators';
 import { AuthService } from '@core/authentication';
+import { InputComponent } from 'app/routes/material/input/input.component';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ import { AuthService } from '@core/authentication';
 })
 export class LoginComponent {
   isSubmitting = false;
+  showPassword = false;
 
   loginForm = this.fb.nonNullable.group({
     username: ['ng-matero', [Validators.required]],
@@ -20,6 +22,19 @@ export class LoginComponent {
   });
 
   constructor(private fb: FormBuilder, private router: Router, private auth: AuthService) {}
+
+
+  get passwordType() {
+    return this.showPassword ? 'text' : 'password';
+  }
+
+  get passwordToggleLabel() {
+    return this.showPassword ? 'Hide password' : 'Reveal password';
+  }
+
+  get passwordToggleIcon() {
+    return this.showPassword ? 'visibility_off' : 'visibility';
+  }
 
   get username() {
     return this.loginForm.get('username')!;
