@@ -4,6 +4,10 @@
 
 .mat-mdc-card {
   margin-bottom: variables.$gutter;
+  .mat-mdc-card-avatar{
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .mat-mdc-accordion {
@@ -15,4 +19,15 @@
   .mat-mdc-form-field {
     width: 100%;
   }
+}
+
+.status {
+  margin: 0 17px;
+}
+
+.conected{
+  background-color: #12ec2f3a !important;
+}
+.desconected{
+  background-color: #e472723a !important;
 }

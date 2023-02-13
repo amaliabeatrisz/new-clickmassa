@@ -9,6 +9,7 @@ import { Error403Component } from './sessions/403.component';
 import { Error404Component } from './sessions/404.component';
 import { Error500Component } from './sessions/500.component';
 import { ConexoesComponent } from './conexoes/conexoes.component';
+import { ContatosComponent } from './contatos/contatos.component';
 
 const COMPONENTS: any[] = [
   DashboardComponent,
@@ -18,6 +19,7 @@ const COMPONENTS: any[] = [
   Error404Component,
   Error500Component,
   ConexoesComponent,
+  ContatosComponent,
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 

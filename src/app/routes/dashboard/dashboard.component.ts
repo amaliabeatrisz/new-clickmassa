@@ -2,9 +2,7 @@ import {
   Component,
   OnInit,
   ChangeDetectionStrategy,
-  NgZone,
   ChangeDetectorRef,
-  OnDestroy
 } from '@angular/core';
 import { SettingsService } from '@core';
 import { Subscription } from 'rxjs';
@@ -29,77 +27,33 @@ export class DashboardComponent implements OnInit {
 
   columns: MtxGridColumn[] = [
     {
-      header: this.translate.stream('table_kitchen_sink.position'),
-      field: 'position',
-      sortable: true,
-      minWidth: 100,
-      width: '100px',
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.name'),
-      field: 'name',
+      header: this.translate.stream('table_kitchen_sink.data'),
+      field: 'data',
       sortable: true,
       disabled: true,
       minWidth: 100,
       width: '100px',
     },
     {
-      header: this.translate.stream('table_kitchen_sink.weight'),
-      field: 'weight',
+      header: this.translate.stream('table_kitchen_sink.ID'),
+      field: 'ID',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.symbol'),
-      field: 'symbol',
+      header: this.translate.stream('table_kitchen_sink.nome'),
+      field: 'nome',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.gender'),
-      field: 'gender',
+      header: this.translate.stream('table_kitchen_sink.status'),
+      field: 'status',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.mobile'),
-      field: 'mobile',
+      header: this.translate.stream('table_kitchen_sink.acoes'),
+      field: 'acoes',
       hide: true,
       minWidth: 120,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.tele'),
-      field: 'tele',
-      minWidth: 120,
-      width: '120px',
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.birthday'),
-      field: 'birthday',
-      minWidth: 180,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.city'),
-      field: 'city',
-      minWidth: 120,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.address'),
-      field: 'address',
-      minWidth: 180,
-      width: '200px',
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.company'),
-      field: 'company',
-      minWidth: 120,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.website'),
-      field: 'website',
-      minWidth: 180,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.email'),
-      field: 'email',
-      minWidth: 180,
     },
     {
       header: this.translate.stream('table_kitchen_sink.operation'),
@@ -113,7 +67,7 @@ export class DashboardComponent implements OnInit {
           type: 'icon',
           icon: 'edit',
           tooltip: this.translate.stream('table_kitchen_sink.edit'),
-          click: record => this.edit(record),
+          // click: record => this.edit(record),
         },
         {
           color: 'warn',
@@ -125,7 +79,7 @@ export class DashboardComponent implements OnInit {
             closeText: this.translate.stream('table_kitchen_sink.close'),
             okText: this.translate.stream('table_kitchen_sink.ok'),
           },
-          click: record => this.delete(record),
+          // click: record => this.delete(record),
         },
       ],
     },
@@ -133,14 +87,14 @@ export class DashboardComponent implements OnInit {
   list: any[] = [];
   isLoading = true;
 
-  multiSelectable = true;
-  rowSelectable = true;
+  multiSelectable = false;
+  rowSelectable = false;
   hideRowSelectionCheckbox = false;
   showToolbar = true;
   columnHideable = true;
   columnSortable = true;
   columnPinnable = true;
-  rowHover = false;
+  rowHover = true;
   rowStriped = false;
   showPaginator = true;
   expandable = false;

@@ -19,7 +19,7 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <br>
+  <p></p>
 
   <div class="col-md-12">
   <!-- <mat-card>
@@ -63,7 +63,7 @@
           [rowHover]="rowHover"
           [rowStriped]="rowStriped"
           [showToolbar]="showToolbar"
-          [toolbarTitle]="'Data Grid Toolbar'"
+          [toolbarTitle]="'RELATÓRIO DE CAMPANHAS'"
           [columnHideable]="columnHideable"
           [columnSortable]="columnSortable"
           [columnPinnable]="columnPinnable"
@@ -73,7 +73,7 @@
           [showPaginator]="showPaginator"
           [pageSizeOptions]="[5,10,50,100]"
           [pageIndex]="0"
-          [pageSize]="5"
+          [pageSize]="10"
           (sortChange)="changeSort($event)"
           (selectionChange)="changeSelect($event)">
 </mtx-grid>
@@ -81,7 +81,6 @@
   {{row.name}}
 </ng-template>
 
-<button mat-stroked-button (click)="updateCell()">Update Cell</button>
 <button mat-stroked-button (click)="updateList()">Update List</button>
 
 </div>
