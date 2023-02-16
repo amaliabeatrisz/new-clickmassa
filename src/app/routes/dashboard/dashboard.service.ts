@@ -99,16 +99,7 @@ export class DashboardService {
       color: 'bg-blue-500',
     },
     {
-      title: 'Mensagens Lidas',
-      icon: 'done_all',
-      amount: '10.000',
-      progress: {
-        value: 5.000,
-      },
-      color: 'bg-green-500',
-    },
-    {
-      title: 'Mensagens Respondidas',
+      title: 'Conexões Conectadas',
       icon: 'reply',
       amount: '5.000',
       progress: {
