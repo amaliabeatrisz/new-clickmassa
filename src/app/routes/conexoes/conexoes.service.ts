@@ -1,28 +1,18 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-import { ConexoesComponent } from './conexoes.component';
+export interface RepoSearchList {
+  incomplete_results: boolean;
+  items: any[];
+  total_count: number;
+}
 
-describe('ConexoesComponent', () => {
-  let component: ConexoesComponent;
-  let fixture: ComponentFixture<ConexoesComponent>;
+@Injectable()
+export class ConexoesService {
+  constructor(private http: HttpClient) {}
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ConexoesComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ConexoesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  getList(params = {}): Observable<RepoSearchList> {
+    return this.http.get<RepoSearchList>('https://api.github.com/search/repositories', { params });
+  }
+}
