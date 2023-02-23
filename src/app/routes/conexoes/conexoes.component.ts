@@ -1,8 +1,10 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 
+import { MtxDialog } from '@ng-matero/extensions/dialog';
 import { MtxGridColumn } from '@ng-matero/extensions/grid';
 import { ConexoesService } from './conexoes.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-conexoes',
@@ -15,27 +17,50 @@ export class ConexoesComponent implements OnInit {
 
   columns: MtxGridColumn[] = [
     {
-      header: 'Name',
-      field: 'name',
-      formatter: (data: any) => `<a href="${data.html_url}" target="_blank">${data.name}</a>`,
-    },
-    { header: 'Owner', field: 'owner.login' },
-    { header: 'Owner Avatar', field: 'owner.avatar_url', type: 'image' },
-    {
-      header: 'Status',
+      header: 'STATUS',
       field: 'archived',
       type: 'tag',
       tag: {
-        true: { text: 'Yes', color: 'green-100' },
-        false: { text: 'No', color: 'red-100' },
+        true: { text: 'Conectado', color: 'green-100' },
+        false: { text: 'Desconectado', color: 'red-100' },
       },
     },
-    { header: 'Stars', field: 'stargazers_count', type: 'number' },
-    { header: 'Forks', field: 'forks_count', type: 'number' },
-    { header: 'Language', field: 'language' },
-    { header: 'License', field: 'license.name' },
-    { header: 'Is forked', field: 'fork', type: 'boolean' },
-    { header: 'Created Date', field: 'created_at' },
+    { header: 'ID', field: 'forks_count', type: 'number' },
+    { header: 'PERFIL', field: 'owner.avatar_url', type: 'image' },
+    {
+      header: 'NOME',
+      field: 'name',
+      formatter: (data: any) => `<a target="_blank">${data.name}</a>`,
+    },
+    {
+      header: this.translate.stream('AÇÕES'),
+      field: 'operation',
+      minWidth: 160,
+      width: '160px',
+      pinned: 'right',
+      type: 'button',
+      buttons: [
+        {
+          type: 'icon',
+          icon: 'visibility',
+          tooltip: this.translate.stream('Vizualizar'),
+          // click: record => this.edit(record),
+        },
+        {
+          color: 'warn',
+          icon: 'remove_circle_outline',
+          text: this.translate.stream('table_kitchen_sink.delete'),
+          tooltip: this.translate.stream('Desconectar'),
+          pop: {
+            title: this.translate.stream('table_kitchen_sink.confirm_delete'),
+            closeText: this.translate.stream('table_kitchen_sink.close'),
+            okText: this.translate.stream('table_kitchen_sink.ok'),
+          },
+          // click: record => this.delete(record),
+        },
+      ],
+    },
+    // { header: 'Created Date', field: 'created_at' },
   ];
   list: any[] = [];
   total = 0;
@@ -55,7 +80,12 @@ export class ConexoesComponent implements OnInit {
     return p;
   }
 
-  constructor(private remoteSrv: ConexoesService, private cdr: ChangeDetectorRef) {}
+  constructor(
+    public dialog: MtxDialog,
+    private translate: TranslateService,
+    private remoteSrv: ConexoesService,
+    private cdr: ChangeDetectorRef
+    ) {}
 
   ngOnInit() {
     this.getList();
@@ -91,6 +121,14 @@ export class ConexoesComponent implements OnInit {
   search() {
     this.query.page = 0;
     this.getList();
+  }
+  edit(value: any) {
+    const dialogRef = this.dialog.originalOpen(ConexoesComponent, {
+      width: '600px',
+      data: { record: value },
+    });
+
+    dialogRef.afterClosed().subscribe(() => console.log('The dialog was closed'));
   }
 
   reset() {

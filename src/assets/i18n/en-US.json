@@ -140,7 +140,7 @@
     "operation": "Operation",
     "edit": "Edit",
     "delete": "Delete",
-    "confirm_delete": "Confirm delete?",
+    "confirm_delete": "Desconectar?",
     "ok": "Ok",
     "close": "Close"
   }

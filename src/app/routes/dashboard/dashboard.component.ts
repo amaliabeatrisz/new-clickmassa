@@ -65,14 +65,14 @@ export class DashboardComponent implements OnInit {
       buttons: [
         {
           type: 'icon',
-          icon: 'edit',
+          icon: 'visibility',
           tooltip: this.translate.stream('table_kitchen_sink.edit'),
           // click: record => this.edit(record),
         },
         {
           color: 'warn',
-          icon: 'delete',
-          text: this.translate.stream('table_kitchen_sink.delete'),
+          icon: 'remove_circle_outline',
+          text: this.translate.stream('Desconectar'),
           tooltip: this.translate.stream('table_kitchen_sink.delete'),
           pop: {
             title: this.translate.stream('table_kitchen_sink.confirm_delete'),
