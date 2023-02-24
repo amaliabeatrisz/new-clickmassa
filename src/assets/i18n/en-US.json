@@ -140,8 +140,9 @@
     "operation": "Operation",
     "edit": "Edit",
     "delete": "Delete",
-    "confirm_delete": "Desconectar?",
+    "confirm_desconnect": "Desconectar?",
+    "confirm_delete": "Confirmar exclusão da campanha?",
     "ok": "Ok",
-    "close": "Close"
+    "close": "Fechar"
   }
 }

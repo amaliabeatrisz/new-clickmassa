@@ -18,6 +18,7 @@ export class ConexoesComponent implements OnInit {
   columns: MtxGridColumn[] = [
     {
       header: 'STATUS',
+      pinned: 'right',
       field: 'archived',
       type: 'tag',
       tag: {
@@ -25,10 +26,11 @@ export class ConexoesComponent implements OnInit {
         false: { text: 'Desconectado', color: 'red-100' },
       },
     },
-    { header: 'ID', field: 'forks_count', type: 'number' },
-    { header: 'PERFIL', field: 'owner.avatar_url', type: 'image' },
+    { header: 'ID', pinned: 'right', field: 'forks_count', type: 'number' },
+    { header: 'PERFIL', pinned: 'right', field: 'owner.avatar_url', type: 'image' },
     {
       header: 'NOME',
+      pinned: 'right',
       field: 'name',
       formatter: (data: any) => `<a target="_blank">${data.name}</a>`,
     },
@@ -48,11 +50,11 @@ export class ConexoesComponent implements OnInit {
         },
         {
           color: 'warn',
-          icon: 'remove_circle_outline',
+          icon: 'mobile_off',
           text: this.translate.stream('table_kitchen_sink.delete'),
           tooltip: this.translate.stream('Desconectar'),
           pop: {
-            title: this.translate.stream('table_kitchen_sink.confirm_delete'),
+            title: this.translate.stream('table_kitchen_sink.confirm_desconnect'),
             closeText: this.translate.stream('table_kitchen_sink.close'),
             okText: this.translate.stream('table_kitchen_sink.ok'),
           },

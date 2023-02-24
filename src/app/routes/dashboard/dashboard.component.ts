@@ -58,11 +58,17 @@ export class DashboardComponent implements OnInit {
     {
       header: this.translate.stream('table_kitchen_sink.operation'),
       field: 'operation',
-      minWidth: 160,
-      width: '160px',
+      minWidth: 230,
+      width: '230px',
       pinned: 'right',
       type: 'button',
       buttons: [
+        {
+          type: 'icon',
+          icon: 'print',
+          tooltip: this.translate.stream('table_kitchen_sink.edit'),
+          // click: record => this.edit(record),
+        },
         {
           type: 'icon',
           icon: 'visibility',
@@ -70,8 +76,14 @@ export class DashboardComponent implements OnInit {
           // click: record => this.edit(record),
         },
         {
+          type: 'icon',
+          icon: 'file_copy',
+          tooltip: this.translate.stream('table_kitchen_sink.edit'),
+          // click: record => this.edit(record),
+        },
+        {
           color: 'warn',
-          icon: 'remove_circle_outline',
+          icon: 'delete',
           text: this.translate.stream('Desconectar'),
           tooltip: this.translate.stream('table_kitchen_sink.delete'),
           pop: {
