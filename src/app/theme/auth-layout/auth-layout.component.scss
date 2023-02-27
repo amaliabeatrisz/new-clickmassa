@@ -1,38 +1,38 @@
-// .matero-auth-container {
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-//   min-height: 100%;
-//   padding: 16px;
-//   background-color: #2d7be0;
-//   background-image:
-//     linear-gradient(
-//       45deg,
-//       rgba(255, 255, 255, .05) 25%,
-//       transparent 25%,
-//       transparent 75%,
-//       rgba(255, 255, 255, .05) 75%,
-//       rgba(255, 255, 255, .05)
-//     ),
-//     linear-gradient(
-//       -45deg,
-//       rgba(255, 255, 255, .05) 25%,
-//       transparent 25%,
-//       transparent 75%,
-//       rgba(255, 255, 255, .05) 75%,
-//       rgba(255, 255, 255, .05)
-//     );
-//   background-size: 60px 60px;
-// }
-
-
 .matero-auth-container {
   position: relative;
   display: flex;
   justify-content: center;
   min-height: 100%;
   padding: 16px;
-  background-repeat: no-repeat;
-  background-image:url('https://clickmassa.com.br/wp-content/uploads/2022/02/DOBRA-1.jpg');
+  background-color: #9faebe;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, .05) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, .05) 75%,
+      rgba(255, 255, 255, .05)
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, .05) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, .05) 75%,
+      rgba(255, 255, 255, .05)
+    );
+  background-size: 60px 60px;
 }
+
+
+// .matero-auth-container {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   min-height: 100%;
+//   padding: 16px;
+//   background-repeat: no-repeat;
+//   background-image:url('https://clickmassa.com.br/wp-content/uploads/2022/02/DOBRA-1.jpg');
+// }
 
