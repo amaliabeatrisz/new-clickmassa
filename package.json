@@ -47,7 +47,7 @@
     "apexcharts": "^3.36.3",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.38",
-    "ngx-permissions": "^14.0.0",
+    "ngx-permissions": "^15.0.0",
     "ngx-progressbar": "^9.0.0",
     "ngx-toastr": "^16.0.2",
     "photoviewer": "^3.6.6",
