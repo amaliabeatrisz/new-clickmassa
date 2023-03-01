@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
 
   columns: MtxGridColumn[] = [
     {
-      header: this.translate.stream('table_kitchen_sink.data'),
+      header: this.translate.stream('Data'),
       field: 'data',
       sortable: true,
       disabled: true,
@@ -35,28 +35,22 @@ export class DashboardComponent implements OnInit {
       width: '100px',
     },
     {
-      header: this.translate.stream('table_kitchen_sink.ID'),
+      header: this.translate.stream('ID'),
       field: 'ID',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.nome'),
+      header: this.translate.stream('Nome'),
       field: 'nome',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.status'),
+      header: this.translate.stream('Status'),
       field: 'status',
       minWidth: 100,
     },
     {
-      header: this.translate.stream('table_kitchen_sink.acoes'),
-      field: 'acoes',
-      hide: true,
-      minWidth: 120,
-    },
-    {
-      header: this.translate.stream('table_kitchen_sink.operation'),
+      header: this.translate.stream('Ações'),
       field: 'operation',
       minWidth: 230,
       width: '230px',
@@ -64,6 +58,7 @@ export class DashboardComponent implements OnInit {
       type: 'button',
       buttons: [
         {
+          color: 'accent',
           type: 'icon',
           icon: 'print',
           tooltip: this.translate.stream('table_kitchen_sink.edit'),
@@ -76,6 +71,7 @@ export class DashboardComponent implements OnInit {
           // click: record => this.edit(record),
         },
         {
+          color: 'warn',
           type: 'icon',
           icon: 'file_copy',
           tooltip: this.translate.stream('table_kitchen_sink.edit'),

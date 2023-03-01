@@ -27,7 +27,25 @@ export class ConexoesComponent implements OnInit {
       },
     },
     { header: 'ID', pinned: 'right', field: 'forks_count', type: 'number' },
-    { header: 'PERFIL', pinned: 'right', field: 'owner.avatar_url', type: 'image' },
+    { header: 'PERFIL',
+      pinned: 'right',
+      field: 'owner.avatar_url',
+      type: 'image',
+      buttons: [
+      {
+        class: 'bg-green-500 text-white',
+        type: 'icon',
+        icon: 'tap_and_play',
+        tooltip: this.translate.stream('Conectar'),
+        pop: {
+          title: this.translate.stream('CÓDIGO QRCODE'),
+          closeText: this.translate.stream('table_kitchen_sink.close'),
+          okText: this.translate.stream('table_kitchen_sink.ok'),
+        },
+        // click: record => this.edit(record),
+      },
+    ],
+  },
     {
       header: 'NOME',
       pinned: 'right',
@@ -43,13 +61,19 @@ export class ConexoesComponent implements OnInit {
       type: 'button',
       buttons: [
         {
+          class: 'bg-green-500 text-white',
           type: 'icon',
-          icon: 'visibility',
-          tooltip: this.translate.stream('Vizualizar'),
+          icon: 'tap_and_play',
+          tooltip: this.translate.stream('Conectar'),
+          pop: {
+            title: this.translate.stream('CÓDIGO QRCODE'),
+            closeText: this.translate.stream('table_kitchen_sink.close'),
+            okText: this.translate.stream('table_kitchen_sink.ok'),
+          },
           // click: record => this.edit(record),
         },
         {
-          color: 'warn',
+          class: 'bg-red-500 text-white',
           icon: 'mobile_off',
           text: this.translate.stream('table_kitchen_sink.delete'),
           tooltip: this.translate.stream('Desconectar'),
@@ -123,14 +147,6 @@ export class ConexoesComponent implements OnInit {
   search() {
     this.query.page = 0;
     this.getList();
-  }
-  edit(value: any) {
-    const dialogRef = this.dialog.originalOpen(ConexoesComponent, {
-      width: '600px',
-      data: { record: value },
-    });
-
-    dialogRef.afterClosed().subscribe(() => console.log('The dialog was closed'));
   }
 
   reset() {
